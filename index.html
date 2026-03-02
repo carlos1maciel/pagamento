@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil Psíquico — Descubra Quem Você Realmente É</title>
+    <meta
+      name="description"
+      content="Teste de personalidade com mais de 247 mil pessoas. Descubra seu perfil psíquico em 5 minutos e receba um laudo completo com suas forças, pontos cegos e plano de 30 dias."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>"
+    />
+  </head>
+  <body>
+    <!-- FUNDO AMBIENTE -->
+    <div class="bg-ambient"></div>
+
+    <!-- ============================================================
+     SEÇÃO 1: LANDING PAGE
+     ============================================================ -->
+    <section class="section" id="section-landing">
+      <!-- Top bar -->
+      <div class="top-bar">
+        <span class="logo">✦ Perfil Psíquico</span>
+        <span class="user-count-bar">
+          <span class="pulse-dot"></span>
+          <span id="live-count">1.247</span> pessoas online agora
+        </span>
+      </div>
+
+      <!-- Hero -->
+      <div class="landing-hero">
+        <span class="badge-social">
+          ⭐ Mais de 247 mil perfis revelados • 94% de precisão
+        </span>
+
+        <h1>
+          Descubra quem você<br />
+          <span>realmente é</span>
+        </h1>
+
+        <p class="subtitle">
+          Um teste psicológico de 5 minutos revela seu perfil de personalidade
+          completo — suas forças ocultas, pontos cegos e o plano para se tornar
+          a melhor versão de você mesmo.
+        </p>
+
+        <!-- Social Proof numbers -->
+        <div class="social-proof-row">
+          <div class="proof-item">
+            <div class="proof-number" id="counter-users">0</div>
+            <div class="proof-label">Perfis revelados</div>
+          </div>
+          <div class="proof-item">
+            <div class="proof-number" id="counter-types">0</div>
+            <div class="proof-label">Tipos de personalidade</div>
+          </div>
+          <div class="proof-item">
+            <div class="proof-number" id="counter-accuracy">0</div>
+            <div class="proof-label">Precisão declarada</div>
+          </div>
+          <div class="proof-item">
+            <div class="stars">★★★★★</div>
+            <div class="proof-label">4.9 / 5.0 avaliação</div>
+          </div>
+        </div>
+
+        <button class="btn-primary" id="start-quiz-btn" onclick="startQuiz()">
+          🧠 Iniciar Teste Gratuito →
+        </button>
+        <div class="cta-note">
+          🔒 100% gratuito para começar • Resultado disponível em ~5 min
+        </div>
+
+        <!-- Feature cards -->
+        <div class="features-grid">
+          <div class="feature-card">
+            <span class="feature-icon">🎯</span>
+            <div class="feature-title">15 questões precisas</div>
+            <div class="feature-desc">
+              Desenvolvidas com base em 3 dimensões psicológicas validadas
+            </div>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🧬</span>
+            <div class="feature-title">8 perfis únicos</div>
+            <div class="feature-desc">
+              Análise multidimensional que vai além do MBTI tradicional
+            </div>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">📋</span>
+            <div class="feature-title">Laudo completo</div>
+            <div class="feature-desc">
+              Forças, pontos cegos, carreira ideal e plano de 30 dias
+            </div>
+          </div>
+        </div>
+
+        <!-- O que está incluído -->
+        <div style="max-width: 720px; margin: 48px auto 0">
+          <div class="section-label">O que você vai descobrir</div>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 12px;
+              max-width: 580px;
+              margin: 0 auto;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 0.88rem;
+                color: var(--text-2);
+              "
+            >
+              <span style="color: var(--green)">✓</span> Seu perfil de
+              personalidade completo
+            </div>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 0.88rem;
+                color: var(--text-2);
+              "
+            >
+              <span style="color: var(--green)">✓</span> Suas 5 forças naturais
+              ocultas
+            </div>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 0.88rem;
+                color: var(--text-2);
+              "
+            >
+              <span style="color: var(--green)">✓</span> Seus 3 principais
+              pontos cegos
+            </div>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 0.88rem;
+                color: var(--text-2);
+              "
+            >
+              <span style="color: var(--green)">✓</span> Carreiras ideais para
+              seu perfil
+            </div>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 0.88rem;
+                color: var(--text-2);
+              "
+            >
+              <span style="color: var(--green)">✓</span> Compatibilidade afetiva
+              e social
+            </div>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 0.88rem;
+                color: var(--text-2);
+              "
+            >
+              <span style="color: var(--green)">✓</span> Plano de crescimento de
+              30 dias
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimentos landing -->
+        <div class="testimonials-landing">
+          <div class="section-label" style="margin-top: 48px">
+            O que dizem sobre o teste
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div
+                class="stars"
+                style="font-size: 0.85rem; margin-bottom: 10px"
+              >
+                ★★★★★
+              </div>
+              <p class="testimonial-text">
+                "Nunca me senti tão compreendida por um teste. Parecia que
+                alguém tinha me lido de verdade. Chorei lendo o resultado."
+              </p>
+              <div class="testimonial-author">
+                <div class="avatar">AM</div>
+                <div>
+                  <div class="author-name">Ana M.</div>
+                  <div class="author-sub">Designer, São Paulo</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div
+                class="stars"
+                style="font-size: 0.85rem; margin-bottom: 10px"
+              >
+                ★★★★★
+              </div>
+              <p class="testimonial-text">
+                "Compartilhei com toda a minha equipe. Ajudou a entender por que
+                a gente conflitava tanto — e como colaborar melhor."
+              </p>
+              <div class="testimonial-author">
+                <div class="avatar">RL</div>
+                <div>
+                  <div class="author-name">Rafael L.</div>
+                  <div class="author-sub">Gerente de Produto</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div
+                class="stars"
+                style="font-size: 0.85rem; margin-bottom: 10px"
+              >
+                ★★★★★
+              </div>
+              <p class="testimonial-text">
+                "O plano de 30 dias foi o que mais me ajudou. Simples, prático e
+                incrivelmente certeiro para onde eu precisava crescer."
+              </p>
+              <div class="testimonial-author">
+                <div class="avatar">JS</div>
+                <div>
+                  <div class="author-name">Julia S.</div>
+                  <div class="author-sub">Coach e Terapeuta</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 48px">
+          <button class="btn-primary" onclick="startQuiz()">
+            🧠 Quero Descobrir Meu Perfil →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     SEÇÃO 2: QUIZ
+     ============================================================ -->
+    <section class="section" id="section-quiz">
+      <div class="quiz-top">
+        <div class="quiz-nav">
+          <span class="logo" style="font-size: 1rem">✦ Perfil Psíquico</span>
+          <span class="quiz-counter"
+            >Questão <span id="quiz-current">1</span> de
+            <span id="quiz-total">15</span></span
+          >
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="quiz-progress" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div class="quiz-area">
+        <div id="question-wrapper" class="question-wrapper">
+          <div class="question-number" id="question-number-label">
+            Questão 1 de 15
+          </div>
+          <h2 class="question-text" id="question-text"></h2>
+          <div class="options-grid" id="options-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     SEÇÃO 3: CAPTURA DE E-MAIL
+     ============================================================ -->
+    <section class="section" id="section-email">
+      <div class="email-card">
+        <span class="section-icon">🎉</span>
+        <h2>Você está na metade!</h2>
+        <p>
+          Antes de continuar, informe seus dados para receber o seu
+          <strong style="color: var(--purple-light)">resultado completo</strong>
+          por e-mail após o teste.
+        </p>
+
+        <div id="email-form">
+          <div class="form-group">
+            <label for="input-name">Seu nome</label>
+            <input
+              type="text"
+              id="input-name"
+              placeholder="Como posso te chamar?"
+              autocomplete="given-name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="input-email">Seu melhor e-mail</label>
+            <input
+              type="email"
+              id="input-email"
+              placeholder="seu@email.com"
+              autocomplete="email"
+            />
+          </div>
+
+          <button
+            class="btn-primary btn-full"
+            style="margin-top: 8px"
+            onclick="submitEmail()"
+          >
+            Continuar o Teste →
+          </button>
+
+          <p class="privacy-note">
+            🔒 Sem spam. Seus dados são protegidos e não serão compartilhados.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     SEÇÃO 4: LOADING / ANÁLISE
+     ============================================================ -->
+    <section class="section" id="section-loading">
+      <div class="loading-wrapper">
+        <span class="brain-animation">🧠</span>
+        <h2>Analisando seu perfil...</h2>
+        <p class="loading-sub">
+          Processando suas <strong>15 respostas</strong> com nosso algoritmo
+          psicológico
+        </p>
+
+        <div class="loading-progress">
+          <div class="loading-bar" id="loading-bar"></div>
+        </div>
+
+        <ul class="analyses-list">
+          <li class="analyse-item" id="analyse-0">
+            <span class="check-icon">○</span>
+            Mapeando padrão de introversão/extroversão
+          </li>
+          <li class="analyse-item" id="analyse-1">
+            <span class="check-icon">○</span>
+            Analisando dimensão emocional vs. racional
+          </li>
+          <li class="analyse-item" id="analyse-2">
+            <span class="check-icon">○</span>
+            Avaliando perfil de estrutura e flexibilidade
+          </li>
+          <li class="analyse-item" id="analyse-3">
+            <span class="check-icon">○</span>
+            Cruzando dados com base de 247 mil perfis
+          </li>
+          <li class="analyse-item" id="analyse-4">
+            <span class="check-icon">○</span>
+            Identificando pontos cegos e forças ocultas
+          </li>
+          <li class="analyse-item" id="analyse-5">
+            <span class="check-icon">○</span>
+            Montando seu relatório personalizado
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     SEÇÃO 5: PAYWALL
+     ============================================================ -->
+    <section class="section" id="section-paywall">
+      <div class="top-bar">
+        <span class="logo">✦ Perfil Psíquico</span>
+        <span class="user-count-bar">
+          <span class="pulse-dot"></span>
+          Resultado pronto!
+        </span>
+      </div>
+
+      <div class="paywall-container">
+        <!-- Timer urgência -->
+        <div class="timer-bar">
+          <span class="timer-text">
+            🔥 Oferta de acesso especial expira em
+          </span>
+          <span class="timer-display" id="timer-display">15:00</span>
+        </div>
+
+        <!-- Perfil teaser -->
+        <div class="profile-header">
+          <span class="profile-badge">SEU PERFIL FOI IDENTIFICADO</span>
+          <span class="profile-emoji" id="paywall-profile-emoji">🧠</span>
+          <h2 class="profile-type-name" id="paywall-profile-name">
+            Carregando...
+          </h2>
+          <p class="profile-tagline" id="paywall-profile-tagline"></p>
+        </div>
+
+        <!-- Sunk cost -->
+        <div class="sunk-cost-bar">⚠️ <span id="sunk-cost-text"></span></div>
+
+        <!-- Traços: visíveis + bloqueados -->
+        <div class="traits-section">
+          <div class="traits-header">
+            <span class="traits-title">📊 Seus traços de personalidade</span>
+            <span class="traits-badge">15 características mapeadas</span>
+          </div>
+          <div id="traits-list"></div>
+        </div>
+
+        <!-- O que você recebe -->
+        <div class="paywall-card">
+          <div class="paywall-card-header">
+            <h3>🔓 Desbloqueie Seu Resultado Completo</h3>
+            <p>Acesso imediato e permanente ao seu laudo completo</p>
+          </div>
+
+          <ul class="what-you-get">
+            <li>
+              <span class="check-green">✓</span> Análise completa do seu perfil
+              de personalidade
+            </li>
+            <li>
+              <span class="check-green">✓</span> Seus 5 pontos fortes naturais
+              detalhados
+            </li>
+            <li>
+              <span class="check-green">✓</span> Seus 3 pontos cegos com
+              estratégias de superação
+            </li>
+            <li>
+              <span class="check-green">✓</span> 6 profissões ideais mapeadas
+              para seu perfil
+            </li>
+            <li>
+              <span class="check-green">✓</span> Sua compatibilidade afetiva com
+              outros perfis
+            </li>
+            <li>
+              <span class="check-green">✓</span> Plano de crescimento
+              personalizado de 30 dias
+            </li>
+            <li>
+              <span class="check-green">✓</span> Resultado enviado por e-mail em
+              PDF
+            </li>
+          </ul>
+
+          <!-- Preço -->
+          <div class="price-block">
+            <div class="price-original">Valor real: R$ 97,00</div>
+            <div class="price-main">R$ 9,90</div>
+            <div class="price-note">
+              Pagamento único • Acesso imediato e vitalício
+            </div>
+            <div class="guarantee-row">
+              🛡️ Garantia de 7 dias ou seu dinheiro de volta
+            </div>
+          </div>
+
+          <button
+            class="btn-primary btn-full"
+            onclick="goToCheckout()"
+            style="font-size: 1.1rem; padding: 20px"
+          >
+            🔓 Desbloquear Meu Resultado Agora →
+          </button>
+          <p
+            style="
+              text-align: center;
+              font-size: 0.75rem;
+              color: var(--text-4);
+              margin-top: 12px;
+            "
+          >
+            🔒 Pagamento 100% seguro via Pix ou Cartão de Crédito
+          </p>
+        </div>
+
+        <!-- Proof strip -->
+        <div class="proof-strip">
+          <div class="proof-strip-item">
+            <div class="value">247k+</div>
+            <div class="label">Perfis revelados</div>
+          </div>
+          <div class="proof-strip-item">
+            <div class="value">4.9★</div>
+            <div class="label">Avaliação média</div>
+          </div>
+          <div class="proof-strip-item">
+            <div class="value">94%</div>
+            <div class="label">Precisão declarada</div>
+          </div>
+          <div class="proof-strip-item">
+            <div class="value">7 dias</div>
+            <div class="label">Garantia de reembolso</div>
+          </div>
+        </div>
+
+        <!-- Depoimentos -->
+        <div class="testimonials-paywall">
+          <div class="section-label">Quem já desbloqueou diz</div>
+          <div class="testimonial-card">
+            <div class="stars" style="font-size: 0.85rem; margin-bottom: 8px">
+              ★★★★★
+            </div>
+            <p class="testimonial-text">
+              "Achei que seria mais um teste genérico. Mas o nível de
+              detalhamento me deixou sem palavras. O plano de 30 dias foi
+              transformador."
+            </p>
+            <div class="testimonial-author">
+              <div
+                class="avatar"
+                style="background: linear-gradient(135deg, #06b6d4, #8b5cf6)"
+              >
+                MC
+              </div>
+              <div>
+                <div class="author-name">Marcos C.</div>
+                <div class="author-sub">Analista de TI • São Paulo</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars" style="font-size: 0.85rem; margin-bottom: 8px">
+              ★★★★★
+            </div>
+            <p class="testimonial-text">
+              "R$9,90 para me entender 10x melhor? Honestamente, melhor
+              investimento da semana. Já fiz o teste com meu namorado também."
+            </p>
+            <div class="testimonial-author">
+              <div
+                class="avatar"
+                style="background: linear-gradient(135deg, #ec4899, #f59e0b)"
+              >
+                FS
+              </div>
+              <div>
+                <div class="author-name">Fernanda S.</div>
+                <div class="author-sub">Psicóloga • Belo Horizonte</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ rápido -->
+        <div
+          style="
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            margin-bottom: 24px;
+          "
+        >
+          <div
+            class="section-label"
+            style="text-align: left; margin-bottom: 16px"
+          >
+            Perguntas frequentes
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 16px">
+            <div>
+              <p
+                style="font-size: 0.88rem; font-weight: 600; margin-bottom: 4px"
+              >
+                Como funciona o pagamento?
+              </p>
+              <p style="font-size: 0.82rem; color: var(--text-3)">
+                Aceitamos Cartão de Crédito (parcelado) e Pix. O acesso é
+                liberado imediatamente após a confirmação.
+              </p>
+            </div>
+            <div>
+              <p
+                style="font-size: 0.88rem; font-weight: 600; margin-bottom: 4px"
+              >
+                E se eu quiser reembolso?
+              </p>
+              <p style="font-size: 0.82rem; color: var(--text-3)">
+                Você tem 7 dias para solicitar devolução integral do valor, sem
+                perguntas. Simples assim.
+              </p>
+            </div>
+            <div>
+              <p
+                style="font-size: 0.88rem; font-weight: 600; margin-bottom: 4px"
+              >
+                O resultado é permanente?
+              </p>
+              <p style="font-size: 0.82rem; color: var(--text-3)">
+                Sim! Você recebe o PDF por e-mail e tem acesso online vitalício
+                ao seu resultado.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-primary btn-full" onclick="goToCheckout()">
+          🔓 Desbloquear Agora por R$ 9,90 →
+        </button>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     SEÇÃO 6: PAGAMENTO
+     ============================================================ -->
+    <section class="section" id="section-payment">
+      <div class="top-bar">
+        <span class="logo">✦ Perfil Psíquico</span>
+        <span class="user-count-bar">🔒 Checkout seguro</span>
+      </div>
+
+      <div class="checkout-container">
+        <div class="checkout-header">
+          <h2>🔓 Finalizar Pagamento</h2>
+          <p id="checkout-countdown">Desbloqueie seu resultado agora</p>
+        </div>
+
+        <!-- Resumo do pedido -->
+        <div class="order-summary">
+          <div class="order-product">
+            <strong id="checkout-product-name"
+              >Laudo de Personalidade Completo</strong
+            >
+            Acesso imediato e permanente
+          </div>
+          <div class="order-price">R$ 9,90</div>
+        </div>
+
+        <!-- Tabs de pagamento -->
+        <div class="payment-tabs">
+          <button
+            class="tab-btn active"
+            id="tab-btn-card"
+            onclick="switchPaymentTab('card')"
+          >
+            💳 Cartão
+          </button>
+          <button
+            class="tab-btn"
+            id="tab-btn-pix"
+            onclick="switchPaymentTab('pix')"
+          >
+            ⚡ Pix
+          </button>
+        </div>
+
+        <!-- Cartão -->
+        <div class="tab-content active" id="tab-card">
+          <div class="form-group">
+            <label>Nome completo</label>
+            <input
+              type="text"
+              id="checkout-name"
+              placeholder="Como está no cartão"
+              autocomplete="cc-name"
+            />
+          </div>
+          <div class="form-group">
+            <label>E-mail</label>
+            <input
+              type="email"
+              id="checkout-email"
+              placeholder="Para envio do resultado"
+              autocomplete="email"
+            />
+          </div>
+          <div class="form-group">
+            <label>Número do cartão</label>
+            <input
+              type="text"
+              id="card-number"
+              placeholder="0000 0000 0000 0000"
+              maxlength="19"
+              autocomplete="cc-number"
+              inputmode="numeric"
+              oninput="formatCardNumber(this)"
+            />
+          </div>
+          <div class="card-row">
+            <div class="form-group">
+              <label>Validade</label>
+              <input
+                type="text"
+                placeholder="MM/AA"
+                maxlength="5"
+                autocomplete="cc-exp"
+                inputmode="numeric"
+                oninput="formatExpiry(this)"
+              />
+            </div>
+            <div class="form-group">
+              <label>CVV</label>
+              <input
+                type="text"
+                placeholder="123"
+                maxlength="4"
+                autocomplete="cc-csc"
+                inputmode="numeric"
+                oninput="this.value = this.value.replace(/\D/g, '')"
+              />
+            </div>
+          </div>
+
+          <button
+            class="btn-primary btn-full"
+            id="pay-btn"
+            onclick="processPayment()"
+            style="margin-top: 8px; font-size: 1.05rem; padding: 20px"
+          >
+            🔓 Pagar R$ 9,90 e Ver Meu Resultado
+          </button>
+        </div>
+
+        <!-- PIX -->
+        <div class="tab-content" id="tab-pix">
+          <div class="pix-section">
+            <p
+              style="
+                font-size: 0.88rem;
+                color: var(--text-2);
+                margin-bottom: 8px;
+              "
+            >
+              Escaneie o QR Code ou copie a chave Pix abaixo
+            </p>
+            <div class="pix-qr" id="pix-qr-display"></div>
+            <div class="pix-code" id="pix-code-text">Gerando chave...</div>
+            <button
+              class="btn-secondary"
+              onclick="
+                navigator.clipboard
+                  .writeText(
+                    document.getElementById('pix-code-text').textContent,
+                  )
+                  .then(() => alert('Chave copiada!'))
+              "
+            >
+              📋 Copiar Chave Pix
+            </button>
+            <p
+              style="font-size: 0.78rem; color: var(--text-4); margin-top: 16px"
+            >
+              ✅ Após o pagamento, seu resultado é liberado automaticamente em
+              até 2 minutos.
+            </p>
+
+            <button
+              class="btn-primary btn-full"
+              onclick="processPayment()"
+              style="margin-top: 16px"
+            >
+              ✅ Já Realizei o Pagamento Pix
+            </button>
+          </div>
+        </div>
+
+        <!-- Badges de segurança -->
+        <div class="secure-badge">
+          <span>🔒 SSL 256-bit</span>
+          <span>🛡️ Dados protegidos</span>
+          <span>💳 PCI Compliance</span>
+          <span>↩️ 7 dias de garantia</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     SEÇÃO 7: RESULTADO COMPLETO
+     ============================================================ -->
+    <section class="section" id="section-result">
+      <div class="top-bar">
+        <span class="logo">✦ Perfil Psíquico</span>
+        <span class="user-count-bar">
+          <span class="pulse-dot"></span>
+          Resultado desbloqueado!
+        </span>
+      </div>
+
+      <div class="result-container">
+        <!-- Header celebração -->
+        <div class="result-unlocked-header">
+          <span class="unlocked-icon" id="result-profile-emoji">✨</span>
+          <h1 id="result-profile-name">Seu Perfil</h1>
+          <p id="result-header-sub">Seu perfil completo foi desbloqueado.</p>
+        </div>
+
+        <!-- 1. Descrição do perfil -->
+        <div class="result-section">
+          <div class="result-section-header">
+            <span class="result-section-icon">🧬</span>
+            <span class="result-section-title">Quem você é</span>
+          </div>
+          <div class="result-section-body">
+            <p class="result-description" id="result-description"></p>
+          </div>
+        </div>
+
+        <!-- 2. Forças -->
+        <div class="result-section">
+          <div class="result-section-header">
+            <span class="result-section-icon">⚡</span>
+            <span class="result-section-title">Suas forças naturais</span>
+          </div>
+          <div class="result-section-body">
+            <div class="strengths-grid" id="result-strengths"></div>
+          </div>
+        </div>
+
+        <!-- 3. Pontos cegos -->
+        <div class="result-section">
+          <div class="result-section-header">
+            <span class="result-section-icon">🔍</span>
+            <span class="result-section-title">Seus pontos cegos</span>
+          </div>
+          <div class="result-section-body" id="result-blindspots"></div>
+        </div>
+
+        <!-- 4. Carreiras -->
+        <div class="result-section">
+          <div class="result-section-header">
+            <span class="result-section-icon">💼</span>
+            <span class="result-section-title"
+              >Profissões ideais para você</span
+            >
+          </div>
+          <div class="result-section-body">
+            <div class="careers-grid" id="result-careers"></div>
+          </div>
+        </div>
+
+        <!-- 5. Compatibilidade -->
+        <div class="result-section">
+          <div class="result-section-header">
+            <span class="result-section-icon">💕</span>
+            <span class="result-section-title">Compatibilidade afetiva</span>
+          </div>
+          <div class="result-section-body">
+            <div class="compat-grid" id="result-compat"></div>
+          </div>
+        </div>
+
+        <!-- 6. Plano 30 dias -->
+        <div class="result-section">
+          <div class="result-section-header">
+            <span class="result-section-icon">📅</span>
+            <span class="result-section-title"
+              >Seu plano de crescimento — 30 dias</span
+            >
+          </div>
+          <div class="result-section-body" id="result-plan"></div>
+        </div>
+
+        <!-- Share -->
+        <div class="share-section">
+          <h3>Compartilhe com quem você ama 💜</h3>
+          <p>Deixe seus amigos descobrirem o perfil deles também!</p>
+          <div class="share-buttons">
+            <button class="share-btn" onclick="shareResult('whatsapp')">
+              💬 WhatsApp
+            </button>
+            <button class="share-btn" onclick="shareResult('instagram')">
+              📸 Instagram
+            </button>
+            <button class="share-btn" onclick="shareResult('copy')">
+              🔗 Copiar Link
+            </button>
+          </div>
+        </div>
+
+        <!-- Refazer -->
+        <div style="text-align: center; margin-top: 24px">
+          <button class="btn-secondary" onclick="initLanding()">
+            ↺ Refazer o Teste
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/app.js"></script>
+
+    <script>
+      // Live visitor count simulado
+      function updateLiveCount() {
+        const base = 1247;
+        const variation = Math.floor(Math.random() * 30) - 10;
+        const el = document.getElementById("live-count");
+        if (el) el.textContent = (base + variation).toLocaleString("pt-BR");
+      }
+      setInterval(updateLiveCount, 5000);
+    </script>
+  </body>
+</html>
